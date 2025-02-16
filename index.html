@@ -8,14 +8,34 @@
         body { 
             font-family: Arial, sans-serif; 
             line-height: 1.6; 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin: auto; 
             padding: 20px; 
             color: #333;
         }
-        h1, h2 { color: #222; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        .left-section {
+            flex: 1;
+            max-width: 35%;
+        }
+        .right-section {
+            flex: 2;
+            max-width: 60%;
+        }
+        h1, h2 { 
+            color: #222; 
+        }
+        a { 
+            color: #007bff; 
+            text-decoration: none; 
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
         blockquote {
             font-style: italic; 
             color: #555; 
@@ -23,51 +43,78 @@
             padding-left: 10px;
             margin-left: 10px;
         }
+        .project {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .project img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .tag {
+            background: #f3f3f3; 
+            padding: 5px 10px; 
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    
-    <div class="section">
-        <h1>Megha Gulati</h1>
-        <p><strong>Aspiring Data Scientist | ML & AI</strong></p>
 
-        <!-- Poem for Personalization -->
-        <blockquote>
-            "Bring on the troubles, bring on the pain<br>
-            Bring on everything to make me insane<br>
-            Coz fire is needed to have sunshine<br>
-            Now I know for sure, I will be just fine<br>
-            To every problem rising with dawn<br>
-            Say, <strong>‘You don't scare me, Bring it on!’</strong>"
-        </blockquote>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1>Megha Gulati</h1>
+            <p><strong>Aspiring Data Scientist | ML & AI</strong></p>
 
-        <p>📍 Bengaluru, India | ✉️ meghagulati03@gmail.com</p>
-        <p>🔗 <a href="https://www.linkedin.com/in/megha102">LinkedIn</a> | <a href="https://github.com/megha102">GitHub</a></p>
-    </div>
+            <!-- Poem for Personalization -->
+            <blockquote>
+                "Bring on the troubles, bring on the pain<br>
+                Bring on everything to make me insane<br>
+                Coz fire is needed to have sunshine<br>
+                Now I know for sure, I will be just fine<br>
+                To every problem rising with dawn<br>
+                Say, <strong>‘You don't scare me, Bring it on!’</strong>"
+            </blockquote>
 
-    <h2>About Me</h2>
-    <p>Currently working for an <strong>investment banking client</strong> as a <strong>Quality Engineer (QE)</strong>, ensuring high-quality software and automated testing solutions.</p>
-    <p>Pursuing a <strong>Master’s in Computer Science</strong> (Online) from <strong>Georgia Tech</strong>, specializing in <strong>Machine Learning & AI</strong>.</p>
-    <p>Over the last <strong>two years</strong>, I have been actively working on <strong>Proof of Concepts (PoCs)</strong> in Data Science at my current company, integrating Machine Learning models into business solutions.</p>
-    <p>Currently transitioning into a <strong>Data Scientist role</strong>, focusing on Python, SQL, Statistics, Machine Learning, and Deep Learning.</p>
+            <p>📍 Bengaluru, India | ✉️ meghagulati03@gmail.com</p>
+            <p>🔗 <a href="https://www.linkedin.com/in/megha102">LinkedIn</a> | <a href="https://github.com/megha102">GitHub</a></p>
 
-    <div class="project">
-        <img src="debt-analysis-project.png" alt="Consumer Debt Analysis" style="width: 100%; max-width: 400px; border-radius: 10px;">
-    
-        <p><strong>Consumer Debt Analysis</strong></p>
-        
-        <p>This project explores U.S. consumer debt repayment behavior using Machine Learning and Time Series Analysis. 
-        It predicts repayment likelihood within five years of charge-off and forecasts financial trends pre- and post-COVID. 
-        The analysis includes **classification models**, **time-series forecasting**, and **interactive Tableau visualizations** to examine 
-        regional and macroeconomic factors. The project is tested on Windows (with AzureML compatibility issues on M1/M2 silicon chips).</p>
-    
-        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <span style="background: #f3f3f3; padding: 5px 10px; border-radius: 5px;">🐍 Python</span>
-            <span style="background: #f3f3f3; padding: 5px 10px; border-radius: 5px;">📔 Jupyter</span>
-            <span style="background: #f3f3f3; padding: 5px 10px; border-radius: 5px;">📊 Tableau</span>
+            <h2>About Me</h2>
+            <p>Currently working for an <strong>investment banking client</strong> as a <strong>Quality Engineer (QE)</strong>, ensuring high-quality software and automated testing solutions.</p>
+            <p>Pursuing a <strong>Master’s in Computer Science</strong> (Online) from <strong>Georgia Tech</strong>, specializing in <strong>Machine Learning & AI</strong>.</p>
+            <p>Over the last <strong>two years</strong>, I have been actively working on <strong>Proof of Concepts (PoCs)</strong> in Data Science at my current company, integrating Machine Learning models into business solutions.</p>
+            <p>Currently transitioning into a <strong>Data Scientist role</strong>, focusing on Python, SQL, Statistics, Machine Learning, and Deep Learning.</p>
         </div>
-    
-        <p>🔗 <a href="https://github.com/megha102/consumer-debt-analysis">View code on GitHub</a></p>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="project">
+                <img src="debt-analysis-project.png" alt="Consumer Debt Analysis">
+                
+                <p><strong>Consumer Debt Analysis</strong></p>
+                
+                <p>This project explores U.S. consumer debt repayment behavior using Machine Learning and Time Series Analysis. 
+                It predicts repayment likelihood within five years of charge-off and forecasts financial trends pre- and post-COVID. 
+                The analysis includes **classification models**, **time-series forecasting**, and **interactive Tableau visualizations** to examine 
+                regional and macroeconomic factors. The project is tested on Windows (with AzureML compatibility issues on M1/M2 silicon chips).</p>
+
+                <div class="tags">
+                    <span class="tag">🐍 Python</span>
+                    <span class="tag">📔 Jupyter</span>
+                    <span class="tag">📊 Tableau</span>
+                </div>
+
+                <p>🔗 <a href="https://github.com/megha102/consumer-debt-analysis">View code on GitHub</a></p>
+            </div>
+        </div>
     </div>
 
 </body>
